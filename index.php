@@ -10,11 +10,25 @@
 		<img src="logo.png" class="logo">
 	</header>
 	<form action="protokol.php" method="POST">
-	    Число: <input type="text" name="pole1" cols="15" /><br><br> 
+	    Число: <input type="text" name="pole1" /><br><br> 
 	</form>
 	<form action="protokol.php" method="POST">
-	    Логин: <input type="text" name="login" /><br><br> 
+	    Возраст: <input type="text" name="login" /><br><br> 
 	</form>
+		<form action="protokol.php" method="POST">
+	    ФИО: <input type="text" name="login" cols="30" size='30'/><br><br> 
+	</form>
+	<form action="protokol.php" method="POST">
+		Комментарий: <textarea name="comment" rows="5" cols="255"><?php echo $comment;?></textarea>
+	</form>
+	<form action="protokol.php" method="POST">
+		<input type="radio" name="group"
+			<?php if (isset($gender) && $gender=="191-322") echo "checked";?>
+			value="female">191-322
+		<input type="radio" name="group"
+			<?php if (isset($gender) && $gender=="191-321") echo "checked";?>
+			value="male">191-321
+	</form>	
 	<form action="protokol.php" method="POST">
 		<input type="radio" name="gender"
 			<?php if (isset($gender) && $gender=="female") echo "checked";?>
