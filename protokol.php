@@ -1,4 +1,12 @@
-<?php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<?php
 $login = "Не известно";
 $password = "Не известно";
 if(isset($_POST['pole1'])) {
@@ -6,3 +14,14 @@ if(isset($_POST['pole1'])) {
 	echo "Поле 1: $pole1  <br> Поле 2: $password";
 }
 ?>
+<?php
+    if(isset($_POST['subject']) && !empty($_POST['subject']))
+    {
+        $subject = $_POST['pole3'];
+        $pattern = '/^[0-9]*\.?[0-9]*$/';
+        if (!preg_match($pattern, $subject)) exit('Недопустимые символы!');
+        echo 'Зашибись';
+    }
+?>
+</body>
+</html>
