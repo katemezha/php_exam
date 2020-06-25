@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Protocol</title>
 </head>
 <body>
 	 <table border="1">

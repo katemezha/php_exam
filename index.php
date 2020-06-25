@@ -24,7 +24,8 @@
 	</form>
 	<a href="opros.php">Опрос</a>
 	<footer>
-		<span>25.06.2020</span>
+		<span>25.06.2020<br></span>
+		<span>Login:user<br> Password:123</span>
 	</footer>
 
 </body>

@@ -6,14 +6,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<?php
-	if(isset($_POST['login']) && isset($_POST['password'])){
-	 
-	    $login=$_POST['login'];
-	    $password = $_POST['password'];
-	    echo "Ваш логин: $login <br> Ваш пароль: $password";
-	}
-	?>
 	<div>
 		<?php
 		    if( isset( $_POST['ssylka'] ) )
@@ -33,26 +25,37 @@
 		<img src="logo.png" class="logo">
 	</header>
 	<form action="protokol.php" method="POST">
-	    Число: <input type="text" name="pole1"  /><br><br> 
+	    Число: <input type="text" name="pole1"  pattern="^[ 0-9]+$"//><br><br> 
 	    Возраст: <input type="text" name="pole2" pattern="^[ 0-9]+$"/><br><br> 
-	    ФИО: <input type="text" name="pole3" cols="30" size='30'/><br><br> 
+	    ФИО: <input type="text" name="pole3" pattern="{,20}" size='30'/><br><br> 
 		Комментарий: <textarea name="pole4" rows="5" cols="255"><?php echo $pole4;?></textarea>
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-322") echo "checked";?>
-			value="second">191-322
+			value="191-322">191-322
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-321") echo "checked";?>
-			value="first">191-321
+			value="191-321">191-321
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="female") echo "checked";?>
-			value="female">Female
+			value="Женский">Женский
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="male") echo "checked";?>
-			value="male">Male
+			value="Мужской">Мужской
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="other") echo "checked";?>
-			value="other">Other
+			value="Другое">Другое
+		<div>
+		<?php
+			if (isset($_POST['newvar6'])){
+			echo '<input type="radio" name="pole6"
+			<?php if (isset($pole6) && $pole6=="unicorn") 
+				echo "checked";?> 
+				value="'.$_POST['newvar6'].'">'.$_POST['newvar6']);
+		}
+		?>
+		</div>
 		<input type="submit" value="Отправить" name='otpravka'>
+
 	</form>	
 	<form method="POST">
 		    <input type="submit" name="dop1" value="Добавить Форму" />
@@ -62,6 +65,7 @@
 	</form>
 	<form method="POST">
 		    <input type="submit" name="dop3" value="Добавить вариант в 6 вопрос" />
+		    Вариант: <input type="text" name="newvar6" pattern="{,20}" size='30'/><br><br> 
 	</form>
 	<form method="POST">
 		    <input type="submit" name="obnull" value="Обнулить сессию" />
