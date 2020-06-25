@@ -64,13 +64,7 @@
 		    <input type="submit" name="dop3" value="Добавить вариант в 6 вопрос" />
 	</form>
 	<form method="POST">
-		    <input type="submit" name="obnull" value="Добавить вариант в 6 вопрос" />
-	</form>
-	<h3>Вход для админа</h3>
-	<form method="POST">
-	    Логин: <input type="text" name="login" /><br><br>
-	    Пароль: <input type="text" name="password" /><br><br>
-	    <input type="submit" value="Войти">
+		    <input type="submit" name="obnull" value="Обнулить сессию" />
 	</form>
 	<a href="opros.php">Опрос</a>
 	<footer>

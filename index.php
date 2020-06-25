@@ -9,7 +9,8 @@
 	<?php
 	if(isset($_POST['login']) && isset($_POST['password'])&& $_POST['login']=='user' && $_POST['password']=='123'){
 	 
-		System.Diagnostics.Process.Start('admin.php');
+		header('Location: admin.php');
+
 	}
 	?>
 	<header>Межникова Екатерина 191-322 <br>Экзаменационная работа
