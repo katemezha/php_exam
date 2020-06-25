@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Exam</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +14,14 @@
 	    echo "Ваш логин: $login <br> Ваш пароль: $password";
 	}
 	?>
+	<div>
+		<?php
+		    if( isset( $_POST['ssylka'] ) )
+		    {
+		        echo 'http://php-exam.std-925.ist.mospolytech.ru';
+		    }
+		?>
+	</div>
 
 	<header>Межникова Екатерина 191-322 <br>Экзаменационная работа
 		<img src="logo.png" class="logo">
@@ -64,20 +72,13 @@
 	    Пароль: <input type="text" name="password" /><br><br>
 	    <input type="submit" value="Войти">
 	</form>
+	<a href="opros.php">Опрос</a>
 	<footer>
 		<span>25.06.2020</span>
 		<a href="protokol.php">Открыть протокол</a>
 		<form method="POST">
 		    <input type="submit" name="ssylka" value="Сгенерировать ссылку" />
 		</form>
-		<div>
-			<?php
-		    if( isset( $_POST['ssylka'] ) )
-		    {
-		        echo 'http://php-exam.std-925.ist.mospolytech.ru';
-		    }
-		?>
-		</div>
 	</footer>
 
 </body>

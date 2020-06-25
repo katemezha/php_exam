@@ -16,26 +16,11 @@
     <th>Группа</th>
     <th>Пол</th>
    </tr>
-   <tr><td>34,5</td><td>3,5</td><td>36</td><td>23</td><td>36</td><td>23</td></tr>
+   <?php
+   '<tr><td>'.$_POST['pole1'].'</td><td>'.$_POST['pole2'].'</td><td>'.$_POST['pole3'].'</td><td>'.$_POST['pole4'].'</td><td>'.$_POST['pole5'].'</td><td>'.$_POST['pole6'].'</td></tr>'
+   ?>
   </table>
 	<div>
-	<?php
-	$login = "Не известно";
-	$password = "Не известно";
-	if(isset($_POST['pole1'])) {
-		$login=strip_tags($_POST['lPole 1'])
-		echo "Поле 1: $pole1  <br> Поле 2: $password";
-	}
-	?>
-	<?php
-	    if(isset($_POST['subject']) && !empty($_POST['subject']))
-	    {
-	        $subject = $_POST['pole3'];
-	        $pattern = '/^[0-9]*\.?[0-9]*$/';
-	        if (!preg_match($pattern, $subject)) exit('Недопустимые символы!');
-	        echo 'Зашибись';
-	    }
-	?>
 </div>
 </body>
 </html>
