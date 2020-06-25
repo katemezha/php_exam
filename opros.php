@@ -19,12 +19,12 @@
 			value="second">191-322
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-321") echo "checked";?>
-			value="first">191-321
+			value="first">191-321 <br>
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="Женский") echo "checked";?>
 			value="female">Женский
 		<input type="radio" name="pole6"
-			<?php if (isset($pole6) && $pole6=="Мужскогй") echo "checked";?>
+			<?php if (isset($pole6) && $pole6=="Мужской") echo "checked";?>
 			value="male">Мужской
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="Другое") echo "checked";?>

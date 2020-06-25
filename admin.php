@@ -44,18 +44,7 @@
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="other") echo "checked";?>
 			value="Другое">Другое
-		<div>
-		<?php
-			if (isset($_POST['newvar6'])){
-			echo '<input type="radio" name="pole6"
-			<?php if (isset($pole6) && $pole6=="unicorn") 
-				echo "checked";?> 
-				value="'.$_POST['newvar6'].'">'.$_POST['newvar6']);
-		}
-		?>
-		</div>
 		<input type="submit" value="Отправить" name='otpravka'>
-
 	</form>	
 	<form method="POST">
 		    <input type="submit" name="dop1" value="Добавить Форму" />
