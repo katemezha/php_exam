@@ -11,34 +11,25 @@
 	</header>
 	<form action="protokol.php" method="POST">
 	    Число: <input type="text" name="pole1"  /><br><br> 
-	</form>
-	<form action="protokol.php" method="POST">
 	    Возраст: <input type="text" name="pole2" pattern="^[ 0-9]+$"/><br><br> 
-	</form>
-		<form action="protokol.php" method="POST">
 	    ФИО: <input type="text" name="pole3" cols="30" size='30'/><br><br> 
-	</form>
-	<form action="protokol.php" method="POST">
-		Комментарий: <textarea name="pole4" rows="5" cols="255"><?php echo $comment;?></textarea>
-	</form>
-	<form action="protokol.php" method="POST">
+		Комментарий: <textarea name="pole4" rows="5" cols="255"><?php echo $pole4;?></textarea>
 		<input type="radio" name="pole5"
-			<?php if (isset($group) && $group=="191-322") echo "checked";?>
+			<?php if (isset($pole5) && $pole5=="191-322") echo "checked";?>
 			value="second">191-322
 		<input type="radio" name="pole5"
-			<?php if (isset($group) && $group=="191-321") echo "checked";?>
+			<?php if (isset($pole5) && $pole5=="191-321") echo "checked";?>
 			value="first">191-321
-	</form>	
-	<form action="protokol.php" method="POST">
 		<input type="radio" name="pole6"
-			<?php if (isset($gender) && $gender=="female") echo "checked";?>
+			<?php if (isset($pole6) && $pole6=="female") echo "checked";?>
 			value="female">Female
 		<input type="radio" name="pole6"
-			<?php if (isset($gender) && $gender=="male") echo "checked";?>
+			<?php if (isset($pole6) && $pole6=="male") echo "checked";?>
 			value="male">Male
 		<input type="radio" name="pole6"
-			<?php if (isset($gender) && $gender=="other") echo "checked";?>
+			<?php if (isset($pole6) && $pole6=="other") echo "checked";?>
 			value="other">Other
+		<input type="submit" value="Отправить">
 	</form>	
 	<footer>
 		<span>25.06.2020</span>

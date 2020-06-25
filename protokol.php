@@ -17,7 +17,7 @@
     <th>Пол</th>
    </tr>
    <?php
-   '<tr><td>'.$_POST['pole1'].'</td><td>'.$_POST['pole2'].'</td><td>'.$_POST['pole3'].'</td><td>'.$_POST['pole4'].'</td><td>'.$_POST['pole5'].'</td><td>'.$_POST['pole6'].'</td></tr>'
+   echo'<tr><td>'.$_POST['pole1'].'</td><td>'.$_POST['pole2'].'</td><td>'.$_POST['pole3'].'</td><td>'.$_POST['pole4'].'</td><td>'.$_POST['pole5'].'</td><td>'.$_POST['pole6'].'</td></tr>';
    ?>
   </table>
 	<div>
