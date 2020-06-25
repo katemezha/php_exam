@@ -34,7 +34,7 @@
 			value="191-322">191-322
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-321") echo "checked";?>
-			value="191-321">191-321
+			value="191-321">191-321 <br>
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="female") echo "checked";?>
 			value="Женский">Женский
@@ -43,7 +43,7 @@
 			value="Мужской">Мужской
 		<input type="radio" name="pole6"
 			<?php if (isset($pole6) && $pole6=="other") echo "checked";?>
-			value="Другое">Другое
+			value="Другое">Другое<br>
 		<input type="submit" value="Отправить" name='otpravka'>
 	</form>	
 	<form method="POST">
@@ -51,10 +51,11 @@
 	</form>
 	<form method="POST">
 		    <input type="submit" name="dop2" value="Добавить вариант в 5 вопрос" />
+		    Вариант: <input type="text" name="newvar5" pattern="{,20}" size='30'/><br>
 	</form>
 	<form method="POST">
 		    <input type="submit" name="dop3" value="Добавить вариант в 6 вопрос" />
-		    Вариант: <input type="text" name="newvar6" pattern="{,20}" size='30'/><br><br> 
+		    Вариант: <input type="text" name="newvar6" pattern="{,20}" size='30'/><br> 
 	</form>
 	<form method="POST">
 		    <input type="submit" name="obnull" value="Обнулить сессию" />

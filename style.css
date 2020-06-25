@@ -1,8 +1,8 @@
 header{
 	width:100%;
 	height: 150px;
-	color:white;
-	background-color: crimson;
+	color:#9C54FA;
+	background-color: #F5CBC2;
 	font-size: 30px;
 
 }
@@ -12,17 +12,18 @@ header{
 	top:5px;
 }
 body{
-	background-color: lightgrey;
+	background-color: #E5EFF8;
 	padding: 0px;
 	margin:0px;
 	margin-bottom: 200px;
+
 }
 footer{
 	position: fixed;
 	width:100%;
 	height: 150px;
-	color:white;
-	background-color: crimson;
+	color:#9C54FA;
+	background-color: #F5CBC2;
 	font-size: 30px;
 	bottom: 0px;
 }

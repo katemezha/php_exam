@@ -10,25 +10,25 @@
 		<img src="logo.png" class="logo">
 	</header>
 		<form action="protokol.php" method="POST">
-	    Число: <input type="text" name="pole1"  /><br><br> 
+	    Число: <input type="text" name="pole1"  pattern="^[ 0-9]+$"//><br><br> 
 	    Возраст: <input type="text" name="pole2" pattern="^[ 0-9]+$"/><br><br> 
-	    ФИО: <input type="text" name="pole3" cols="30" size='30'/><br><br> 
+	    ФИО: <input type="text" name="pole3" pattern="{,20}" size='30'/><br><br> 
 		Комментарий: <textarea name="pole4" rows="5" cols="255"><?php echo $pole4;?></textarea>
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-322") echo "checked";?>
-			value="second">191-322
+			value="191-322">191-322
 		<input type="radio" name="pole5"
 			<?php if (isset($pole5) && $pole5=="191-321") echo "checked";?>
-			value="first">191-321 <br>
+			value="191-321">191-321 <br>
 		<input type="radio" name="pole6"
-			<?php if (isset($pole6) && $pole6=="Женский") echo "checked";?>
-			value="female">Женский
+			<?php if (isset($pole6) && $pole6=="female") echo "checked";?>
+			value="Женский">Женский
 		<input type="radio" name="pole6"
-			<?php if (isset($pole6) && $pole6=="Мужской") echo "checked";?>
-			value="male">Мужской
+			<?php if (isset($pole6) && $pole6=="male") echo "checked";?>
+			value="Мужской">Мужской
 		<input type="radio" name="pole6"
-			<?php if (isset($pole6) && $pole6=="Другое") echo "checked";?>
-			value="other">Другое
+			<?php if (isset($pole6) && $pole6=="other") echo "checked";?>
+			value="Другое">Другое<br>
 		<input type="submit" value="Отправить" name='otpravka'>
 	</form>	
 	<footer>
