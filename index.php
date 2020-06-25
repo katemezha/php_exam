@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<?php
+	if(isset($_POST['login']) && isset($_POST['password'])){
+	 
+	    $login=$_POST['login'];
+	    $password = $_POST['password'];
+	    echo "Ваш логин: $login <br> Ваш пароль: $password";
+	}
+	?>
+
 	<header>Межникова Екатерина 191-322 <br>Экзаменационная работа
 		<img src="logo.png" class="logo">
 	</header>
@@ -40,9 +49,36 @@
 			<?php if (isset($gender) && $gender=="other") echo "checked";?>
 			value="other">Other
 	</form>	
+	<form method="POST">
+		    <input type="submit" name="ssylka" value="Добавить Форму" />
+	</form>
+	<form method="POST">
+		    <input type="submit" name="ssylka" value="Добавить вариант в 5 вопрос" />
+	</form>
+	<form method="POST">
+		    <input type="submit" name="ssylka" value="Добавить вариант в 6 вопрос" />
+	</form>
+	<h3>Вход для админа</h3>
+	<form method="POST">
+	    Логин: <input type="text" name="login" /><br><br>
+	    Пароль: <input type="text" name="password" /><br><br>
+	    <input type="submit" value="Войти">
+	</form>
 	<footer>
 		<span>25.06.2020</span>
 		<a href="protokol.php">Открыть протокол</a>
+		<form method="POST">
+		    <input type="submit" name="ssylka" value="Сгенерировать ссылку" />
+		</form>
+		<div>
+			<?php
+		    if( isset( $_POST['ssylka'] ) )
+		    {
+		        echo 'http://php-exam.std-925.ist.mospolytech.ru';
+		    }
+		?>
+		</div>
 	</footer>
+
 </body>
 </html>
