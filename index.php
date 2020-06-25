@@ -17,7 +17,7 @@
 	</form>
 	<footer>
 		<span>25.06.2020</span>
-		<a href="protokol.php">Открыть протокол</a>
+		<a href="protokol.php">Открsыть протокол</a>
 	</footer>
 </body>
 </html>
